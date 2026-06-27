@@ -179,8 +179,8 @@ footer {
   overflow: hidden;
   border-radius: 0 0 40px 40px;
   height: auto;
-  min-height: 220px;
-  max-height: 500px;
+  min-height: 260px;
+  max-height: 320px;
 }
 
 .carrossel h2 {
@@ -721,7 +721,7 @@ margin-bottom: 0 !important; }
   max-width: 100vw !important;
   height: auto !important;
   min-height: auto;
-  max-height: 240px !important;
+  max-height: 300px !important;
   object-fit: contain !important;
   object-position: center;
   margin: 0 0 8px !important; /* só pouquinho abaixo */
@@ -734,8 +734,8 @@ margin-bottom: 0 !important; }
   width: 100vw !important;
   max-width: 100vw !important;
   height: auto !important;
-  min-height: auto;
-  max-height: 220px !important;
+  min-height: 220px;
+  max-height: 280px !important;
   object-fit: contain !important;
   object-position: center;
   margin: 5px 0 !important; /* quase sem espaço */
