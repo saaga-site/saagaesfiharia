@@ -685,49 +685,59 @@ box-shadow: 0 0 20px rgba(255,255,255,.5),
 .redes-sociais img { width: 50px; height: 50px; transition: .3s; cursor:pointer; }
 .redes-sociais img:hover { transform: translateY(-8px) scale(1.15); }
 
-/* 📱 VERSÃO PERFEITA PARA CELULAR (<= 480px) */
+/* 📱 REGRAS PRINCIPAIS PARA CELULAR (<= 480px) */
 @media (max-width: 480px) {
-  /* CORRIGE CARROSSEL DE COMBOS — UM POR VEZ, LARGURA TOTAL */
+  /* Slides e banners principais */
+  .slides { height: 220px; }
+  .slide { height: 220px; margin-top: 15px; }
+
+  /* Carrossel de combos — um por vez, largo e deslizante */
   .carrossel-combos {
     display: flex;
     gap: 15px;
     padding: 10px 15px 20px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
   }
   .carrossel-combos .card-combo {
-    flex: 0 0 92vw !important; /* OCUPA 92% DA TELA — NÃO MAIS FINO */
+    flex: 0 0 92vw !important;
     max-width: 340px !important;
     min-height: auto !important;
     margin: 0 auto !important;
   }
   .card-combo img { height: 170px; object-fit: cover; }
 
-  /* TÍTULOS E TEXTOS */
-  .titulo-destaques h2, .titulo-combos { font-size: 2.2rem !important; }
-  .hero p, h2, h3 { font-size: menor, sem ultrapassar bordas; padding: 0 10px; }
+  /* Títulos e textos */
+  .hero p, .titulo-combos, .carrossel h2 { font-size: 2rem !important; padding: 0 10px; }
+  .preco { font-size: 32px !important; }
 
-  /* BLOCOS E CATEGORIAS — LARGURA TOTAL */
-  .categoria-card, .combo-kids-card, .banner-copa, .banner-esfiha img {
-    width: 94vw !important;
-    max-width: 100% !important;
-    margin-left: auto; margin-right: auto;
-    border-radius: 15px;
-  }
-  .banner-copa { height: 220px; object-fit: cover; }
-
-  /* GRADE DE PRODUTOS: 1 POR LINHA */
-  .grid-produtos, .secao-cardapio {
+  /* Grade de produtos — 1 por linha */
+  .grid-produtos {
     grid-template-columns: 1fr !important;
     padding: 0 15px;
+    gap: 12px;
   }
   .card-produto { width: 100%; max-width: 100%; }
 
-  /* REMOVE AS IMAGENS DE PRÉ‑VIZUALIZAÇÃO QUE ESTÃO SOBREPOSTAS */
-  body > div[style*="position:fixed"],
-  body > div[style*="position:absolute;left:0;bottom:0"],
-  .mini-preview, .img-flutuante { display: none !important; }
+  /* ✅ NOVO — BANNERS: LARGURA TOTAL + TAMANHO PERFEITO */
+  .banner-copa,
+  .combo-kids-banner img,
+  .banner-esfiha img {
+    width: 100vw !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 180px;
+    max-height: 240px;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 -15px !important;
+    border-radius: 0 0 15px 15px;
+  }
 
-  /* NAVEGAÇÃO AJUSTADA */
-  nav ul { gap: 12px; font-size: 0.9rem; }
+  /* Navegação mais compacta */
+  nav ul { gap: 10px; font-size: 0.85rem; flex-wrap: wrap; }
+
+  /* Remove elementos flutuantes que sobrescrevem o conteúdo */
+  .mini-preview, div[style*="position:fixed"], div[style*="position:absolute;bottom"] { display: none !important; }
 }
