@@ -4,9 +4,14 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAAGA</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" 
+    href="manifest.json">
+    <meta name="theme-color" content="#d62828">
+<link rel="apple-touch-icon" href="icones/icon-192.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,8 +41,6 @@
     
 
         <a href="#cardapio" class="btn-combo">Quero o Combo Kids</a>
-    </div>
-</section>
 
 <section class="carrossel">
     <section class="combo-kids-banner">
@@ -45,7 +48,7 @@
     </section>
 
     <div class="combo-imagem">
-        <img src="imagens/combo-kids-saaga.jpg" alt="Combo Kids SAAGA">
+        <img src="imagens/combo-kids-saaga.jpg" alt="">
     </div>
 </section> 
 
@@ -73,7 +76,6 @@
         <img src="imagens/background-combo.jpg" alt="SAAGA" class="slide">
     
     </div>
-</section>
 <!-- COMBOS SAAGA -->
 <section class="combos">
     <h2 class="titulo-combos">COMBOS SAAGA</h2>
@@ -94,7 +96,7 @@
           <button class="botao-combo vermelho"
 onclick="adicionarCarrinho('Combo SAAGA 1', 72.50)">
     🛒 ADICIONAR AO CARRINHO
-
+</button>
 
 </div>
 
@@ -104,12 +106,12 @@ onclick="adicionarCarrinho('Combo SAAGA 1', 72.50)">
             <p>6 Carne • 2 Queijo • 2 Frango Cremoso • 2 Calabresa com Requeijão Cremoso</p>
             <span class="preco">
             <span class="simbolo">R$</span>
-            <span class="valor"> 72,50</span>
+            <span class="valor"> 76,50</span>
             </span>
             <button class="botao-combo roxo"
             onclick="adicionarCarrinho('Combo SAAGA 2', 76.50)">
     🛒 ADICIONAR AO CARRINHO
-
+</button>
 </div>
 
         <div class="card-combo">
@@ -121,12 +123,12 @@ onclick="adicionarCarrinho('Combo SAAGA 1', 72.50)">
             <p>4 Queijo • 4 Carne • 4 Frango Cremoso</p>
             <span class="preco">
             <span class="simbolo">R$</span>
-            <span class="valor"> 72,50</span>
+            <span class="valor"> 77,40</span>
             </span>
             <button class="botao-combo laranja"
-            <button onclick="adicionarCarrinho('Combo SAAGA 3', 77.40)">
+            onclick="adicionarCarrinho('Combo SAAGA 3', 77.40)">
     🛒 ADICIONAR AO CARRINHO
-
+</button>
 </div>
 
         <div class="card-combo">
@@ -135,12 +137,12 @@ onclick="adicionarCarrinho('Combo SAAGA 1', 72.50)">
             <p>6 Carne • 6 Queijo</p>
            <span class="preco">
             <span class="simbolo">R$</span>
-            <span class="valor"> 72,50</span>
+            <span class="valor"> 74,40</span>
             </span>
             <button class="botao-combo verde"
-            <button onclick="adicionarCarrinho('Combo SAAGA 4', 77.40)">
+            onclick="adicionarCarrinho('Combo SAAGA 4', 77.40)">
      🛒 ADICIONAR AO CARRINHO
-
+</button>
 </div>
 
         <div class="card-combo destaque">
@@ -158,24 +160,21 @@ onclick="adicionarCarrinho('Combo SAAGA 1', 72.50)">
 </div>
 
     </div>
-
-    </div>
-
-</div>
+</section>
 
 <section id="vitrine-esfihas">
 
 <h2>🔥 Conheça Nossas Esfihas</h2>
 
 <div class="banner-esfiha">
-    <button class="seta-esquerda"><</button>
+    <button class="seta-esquerda">&lt;</button>
 
 
 <img id="foto-esfiha"
 src="imagens/banner-esfihas/esfiha1.jpg"
 alt="Esfiha SAAGA">
 
-<button class="seta-direita">></button>
+<button class="seta-direita">&gt;</button>
 
 </div>
 
@@ -1049,6 +1048,15 @@ function mostrarToast() {
 <div id="toast-carrinho">
 ✅ Adicionado ao carrinho!
 </div>
+<script>
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js')
+            .then(() => console.log('Service Worker registrado!'))
+            .catch(err => console.log('Erro ao registrar:', err));
+    });
+}
+</script>
 
 </body>
 </html>
