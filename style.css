@@ -168,19 +168,21 @@ footer {
     box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
 }
 
-/* CARROSSEL PRINCIPAL */
 .carrossel {
-    max-width: 1800px;
-    margin-top: 0 !important;
-    position: relative;
-    z-index: 3;
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    overflow: hidden;
-    border-radius: 40px;
-    height: 500px;
+  max-width: 1800px;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0 0 40px 40px;
+  height: auto;
+  min-height: 220px;
+  max-height: 500px;
 }
+
 .carrossel h2 {
     font-family: 'Luckiest Guy', cursive;
     color: #e20c05;
@@ -688,8 +690,10 @@ box-shadow: 0 0 20px rgba(255,255,255,.5),
 
 @media (max-width: 480px) {
   /* Slides principais */
-  .slides { height: 220px; }
-  .slide { height: 220px; margin-top: 0px; }
+  .slides { height: 220px; margin:0 !important;
+    padding: 0 !important;}
+  .slide { height: 220px; margin-top: 0 !important;
+margin-bottom: 0 !important; }
 
   /* Carrossel combos — borda a borda */
   .carrossel-combos {
@@ -711,33 +715,33 @@ box-shadow: 0 0 20px rgba(255,255,255,.5),
     object-fit: cover;
   }
 
-  /* Banner Copa — largura total */
-  .banner-copa {
-    width: 100vw !important;
-    max-width: 100vw !important;
-    height: 320px !important;
-    min-height: 320px;
-    max-height: 320px;
-    object-fit: contain !important;
-    object-position: center;
-    margin: 0 !important;
-    border-radius: 0;
-  }
+  /* 📌 BANNER COPA — SEM ALTURA FIXA, LARGURA TOTAL + POUCO ESPAÇO ABAIXO */
+.banner-copa {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  height: auto !important;
+  min-height: auto;
+  max-height: 240px !important;
+  object-fit: contain !important;
+  object-position: center;
+  margin: 0 0 8px !important; /* só pouquinho abaixo */
+  border-radius: 0;
+}
 
-  /* ✅ BANNER COMBO KIDS — BEM PRÓXIMO AO BOTÃO, SEM ESPAÇO GRANDE */
-  .combo-kids-banner,
-  .combo-kids-banner img {
-    width: 100vw !important;
-    max-width: 100vw !important;
-    height: auto !important;
-    min-height: 180px;
-    max-height: 220px;
-    object-fit: contain !important;
-    object-position: center;
-    margin: 5px 0 !important; /* ← ESPAÇO PEQUENO, LOGO ABAIXO */
-    border-radius: 0;
-    display: block;
-  }
+/* 📌 BANNER COMBO KIDS — LOGO ABAIXO, BEM PRÓXIMO */
+.combo-kids-banner,
+.combo-kids-banner img {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  height: auto !important;
+  min-height: auto;
+  max-height: 220px !important;
+  object-fit: contain !important;
+  object-position: center;
+  margin: 5px 0 !important; /* quase sem espaço */
+  border-radius: 0;
+  display: block;
+}
 
   /* Todas imagens mesmo tamanho */
   .card-combo img,
