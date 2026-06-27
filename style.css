@@ -690,7 +690,7 @@ box-shadow: 0 0 20px rgba(255,255,255,.5),
   .slides { height: 220px; }
   .slide { height: 220px; margin-top: 15px; }
 
-  /* Carrossel de combos — chega na borda */
+  /* Carrossel combos — borda a borda */
   .carrossel-combos {
     display: flex;
     gap: 12px;
@@ -710,7 +710,7 @@ box-shadow: 0 0 20px rgba(255,255,255,.5),
     object-fit: cover;
   }
 
-  /* ✅ BANNER COPA — LARGURA TOTAL + IMAGEM TODA VISÍVEL */
+  /* Banner Copa — largura total */
   .banner-copa {
     width: 100vw !important;
     max-width: 100vw !important;
@@ -723,75 +723,44 @@ box-shadow: 0 0 20px rgba(255,255,255,.5),
     border-radius: 0;
   }
 
-  /* ✅ BANNER COMBO KIDS — COM AS CLASSES EXATAS QUE VOCÊ USA */
+  /* ✅ BANNER COMBO KIDS — BEM PRÓXIMO AO BOTÃO, SEM ESPAÇO GRANDE */
   .combo-kids-banner,
   .combo-kids-banner img {
     width: 100vw !important;
     max-width: 100vw !important;
     height: auto !important;
-    min-height: 190px;
-    max-height: 230px;
+    min-height: 180px;
+    max-height: 220px;
     object-fit: contain !important;
     object-position: center;
-    margin: 0 !important;
+    margin: 5px 0 !important; /* ← ESPAÇO PEQUENO, LOGO ABAIXO */
     border-radius: 0;
     display: block;
   }
 
-  /* ✅ TODAS AS IMAGENS DOS DESTAQUES / PRODUTOS — TAMANHO IGUAL */
+  /* Todas imagens mesmo tamanho */
   .card-combo img,
   .card-produto img,
   .destaques img,
   .img-destaque {
     width: 100% !important;
-    height: 190px !important; /* altura fixa = todas iguais */
+    height: 190px !important;
     object-fit: cover !important;
     object-position: center;
   }
 
-  /* Ajustes gerais */
+  /* Título Destaques + estrelas visíveis */
+  .titulo-destaques { text-align: center; padding: 15px 0; }
+  .titulo-destaques h2 {
+    font-size: 2rem !important;
+    color: #fff !important;
+  }
+  .estrela { font-size: 1.8rem !important; margin: 0 8px; }
+
+  /* Outros ajustes gerais */
   .hero p, .titulo-combos, .carrossel h2 { font-size: 1.9rem; padding: 0 8px; }
   .preco { font-size: 30px; }
   .grid-produtos { grid-template-columns: 1fr !important; padding: 0 8px; gap: 10px; }
   nav ul { gap: 8px; font-size: 0.8rem; flex-wrap: wrap; }
   .mini-preview, div[style*="position:fixed"] { display: none !important; }
 }
-
-/* ✨ ANIMAÇÕES PARA "NOSSOS DESTAQUES" E ESTRELAS */
-/* Estrelas piscando + girando devagar */
-.estrela {
-  display: inline-block;
-  animation: brilhoGirar 1.2s infinite alternate ease-in-out, girarLento 4s linear infinite;
-}
-
-/* Texto com brilho suave + leve flutuar */
-.titulo-destaques h2 {
-  animation: brilhoTexto 2s infinite alternate ease-in-out, flutuar 3s ease-in-out infinite;
-}
-
-/* Definição das animações */
-@keyframes brilhoGirar {
-  0% { opacity: 0.4; transform: scale(0.8); }
-  100% { opacity: 1; transform: scale(1.15); }
-}
-@keyframes girarLento {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-@keyframes brilhoTexto {
-  0% { text-shadow: 0 0 4px #ffd700, 0 0 8px #ffb300; }
-  100% { text-shadow: 0 0 8px #ffd700, 0 0 16px #ffb300, 0 0 24px #f39c12; }
-}
-@keyframes flutuar {
-  0% { transform: translateY(-3px); }
-  50% { transform: translateY(3px); }
-  100% { transform: translateY(-3px); }
-}
-/* Título e estrelas visíveis e animados no celular */
-  .titulo-destaques { text-align: center; padding: 15px 0; }
-  .titulo-destaques h2 {
-    font-size: 2rem !important;
-    color: #fff !important; /* garante que não fique "apagado/invisível" */
-  }
-  .estrela { font-size: 1.8rem !important; margin: 0 8px; }
-  
