@@ -787,3 +787,11 @@ box-shadow: 0 0 20px rgba(255,255,255,.5),
   50% { transform: translateY(3px); }
   100% { transform: translateY(-3px); }
 }
+/* Título e estrelas visíveis e animados no celular */
+  .titulo-destaques { text-align: center; padding: 15px 0; }
+  .titulo-destaques h2 {
+    font-size: 2rem !important;
+    color: #fff !important; /* garante que não fique "apagado/invisível" */
+  }
+  .estrela { font-size: 1.8rem !important; margin: 0 8px; }
+  
