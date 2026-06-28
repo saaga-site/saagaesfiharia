@@ -738,8 +738,8 @@ box-shadow: 0 0 20px rgba(255,255,255,.5),
     width: 100vw !important;
     max-width: 100vw !important;
     height: auto !important;
-    min-height: 420px !important;
-    max-height: 420px !important;
+    min-height: 480px !important;
+    max-height: 480px !important;
     object-fit: cover !important;
     object-position: top;
     margin: 0 0 6px !important; /* pouquíssimo espaço abaixo */
@@ -753,8 +753,6 @@ box-shadow: 0 0 20px rgba(255,255,255,.5),
     width: 100vw !important;
     max-width: 100vw !important;
     height: auto !important;
-    min-height: 380px !important;
-    max-height: 360px !important;
     object-fit: contain !important; /* ✅ NÃO CORTA MAIS A IMAGEM */
     object-position: center !important;
     margin: 0 !important; /* LOGO ABAIXO DO BOTÃO */
