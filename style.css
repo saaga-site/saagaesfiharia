@@ -698,6 +698,7 @@ box-shadow: 0 0 20px rgba(255,255,255,.5),
 .redes-sociais img:hover { transform: translateY(-8px) scale(1.15); }
 
 @media (max-width: 480px) {
+
   /* 🎠 CARROSSEL PRINCIPAL: encosta na linha dourada + mais altura */
   .carrossel {
     margin: 0 !important;
