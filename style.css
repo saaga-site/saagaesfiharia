@@ -741,7 +741,7 @@ box-shadow: 0 0 20px rgba(255,255,255,.5),
     min-height: 420px !important;
     max-height: 420px !important;
     object-fit: cover !important;
-    object-position: center;
+    object-position: top;
     margin: 0 0 6px !important; /* pouquíssimo espaço abaixo */
     border-radius: 18px !important;
     display: block !important;
