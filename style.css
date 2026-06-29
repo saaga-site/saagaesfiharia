@@ -757,9 +757,9 @@ box-shadow: 0 0 20px rgba(255,255,255,.5),
     max-height: none !important;
     object-fit: contain !important; /* ✅ NÃO CORTA MAIS A IMAGEM */
     object-position: center !important;
-    margin: 2px auto !important;
+    margin: -4px auto 4px auto !important;
     padding: 0; /* LOGO ABAIXO DO BOTÃO */
-    border-radius: 8px !important;
+    border-radius: 18px !important;
     display: block !important;
     overflow: visible;
      /* sem corte */
