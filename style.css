@@ -756,7 +756,7 @@ box-shadow: 0 0 20px rgba(255,255,255,.5),
     min-height: 480px !important;
     max-height: 480px !important;
     object-fit: cover !important; /* ✅ NÃO CORTA MAIS A IMAGEM */
-    object-position: center !important;
+    object-position: top !important;
     margin: 0 0 6px auto !important; /* LOGO ABAIXO DO BOTÃO */
     border-radius: 18px !important;
     display: block !important;
