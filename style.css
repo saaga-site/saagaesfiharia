@@ -753,13 +753,14 @@ box-shadow: 0 0 20px rgba(255,255,255,.5),
     width: 100vw !important;
     max-width: 100vw !important;
     height: auto !important;
-    min-height: 480px !important;
-    max-height: 480px !important;
-    object-fit: cover !important; /* ✅ NÃO CORTA MAIS A IMAGEM */
-    object-position: top !important;
-    margin: 0 0 6px auto !important; /* LOGO ABAIXO DO BOTÃO */
-    border-radius: 18px !important;
+    min-height: auto !important;
+    max-height: unset !important;
+    object-fit: contain !important; /* ✅ NÃO CORTA MAIS A IMAGEM */
+    object-position: center !important;
+    margin: 2px auto !important; /* LOGO ABAIXO DO BOTÃO */
+    border-radius: 8px !important;
     display: block !important;
+    overflow: visible;
      /* sem corte */
   }
 
