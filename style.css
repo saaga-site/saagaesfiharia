@@ -747,31 +747,21 @@ box-shadow: 0 0 20px rgba(255,255,255,.5),
     display: block !important;
   }
 
-  /* 🧒 BANNER COMBO KIDS: SUBIR LOGO APÓS O BOTÃO — SEM CORTE */
-  .combo-kids-banner,
-  .combo-kids-banner img {
-    width: 100vw !important;
-    max-width: 100vw !important;
-    height: 320px !important;
-    min-height: auto !important;
-    max-height: none !important;
-    object-fit: contain !important; /* ✅ NÃO CORTA MAIS A IMAGEM */
-    object-position: center !important;
-    margin: -30px auto 0 !important;
-    padding: 0; /* LOGO ABAIXO DO BOTÃO */
-    border-radius: 18px !important;
-    display: block !important;
-    overflow: visible;
-  }
-
-  .combo-kids-banner img {
-    content: url("imagens/combo-kids-banner.png") !important;
-    /* mantém tudo o que já ajustamos: sem corte, encostado etc. */
-    object-fit: contain !important;
-    margin: -10px auto 0 !important;
-    overflow: visible !important;
-  
+ .combo-kids-bloc {
+  width: 100%;
+  max-width: 1200px;
+  margin: -10px auto 0; /* encosta bem no botão */
+  padding: 0;
 }
+.combo-kids-img {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important; /* SEM CORTE */
+  display: block !important;
+  border-radius: 8px !important;
+}
+
+  
   /* 🎴 CARROSSEL COMBOS: 1 por tela, sem quebras */
   .carrossel-combos {
     display: flex;
