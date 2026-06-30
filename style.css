@@ -762,9 +762,16 @@ box-shadow: 0 0 20px rgba(255,255,255,.5),
     border-radius: 18px !important;
     display: block !important;
     overflow: visible;
-     /* sem corte */
   }
 
+  .combo-kids-banner img {
+    content: url("imagens/combo-kids-banner.png") !important;
+    /* mantém tudo o que já ajustamos: sem corte, encostado etc. */
+    object-fit: contain !important;
+    margin: -10px auto 0 !important;
+    overflow: visible !important;
+  
+}
   /* 🎴 CARROSSEL COMBOS: 1 por tela, sem quebras */
   .carrossel-combos {
     display: flex;
