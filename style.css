@@ -861,20 +861,3 @@ box-shadow: 0 0 20px rgba(255,255,255,.5),
   div[style*="overflow:hidden"]
    { display: none !important; }
 }
-/* === Controle das imagens dos slides === */
-.slide-img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;      /* preenche bem no computador */
-  display: block;
-}
-
-/* Ajuste só para celular */
-@media (max-width: 768px) {
-  .slide-img {
-    object-fit: contain;  /* mostra tudo sem cortar o principal */
-    object-position: center;
-    max-height: 320px;     /* altura controlada, não fica muito grande */
-    width: 100% !important
-  }
-}
