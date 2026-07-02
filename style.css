@@ -824,8 +824,10 @@ box-shadow: 0 0 20px rgba(255,255,255,.5),
   .img-destaque {
     width: 100% !important;
     height: 195px !important;
-    object-fit: cover !important;
-    object-position: center !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    padding: 10px !important;
+    background: #fff !important;
   }
 
   /* ✨ TÍTULO + ESTRELAS VISÍVEIS */
