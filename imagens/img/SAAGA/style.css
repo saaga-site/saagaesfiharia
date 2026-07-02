@@ -861,3 +861,20 @@ box-shadow: 0 0 20px rgba(255,255,255,.5),
   div[style*="overflow:hidden"]
    { display: none !important; }
 }
+
+.pontos {
+  text-align: center;
+  margin: 12px 0;
+}
+.ponto {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #555;
+  margin: 0 4px;
+  cursor: pointer;
+}
+.ponto.ativo {
+  background-color: #f9b800; /* mesma cor dos seus botões */
+}
