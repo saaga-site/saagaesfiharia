@@ -193,11 +193,11 @@ alt="Esfiha SAAGA">
 </div>
 
 <div class="indicadores">
-<span class="ativo"></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
+<span class="ponto ativo"></span>
+<span class="ponto"></span>
+<span class="ponto"></span>
+<span class="ponto"></span>
+<span class="ponto"></span>
 </div>
 
 </section>
@@ -997,6 +997,11 @@ const imagens = [
 let imagemAtual = 0;
 
 const fotoEsfiha = document.getElementById("foto-esfiha");
+const pontos = document.querySelectorAll(".indicadores span");
+function atualizarPontos() {
+    pontos.forEach(p => p.classList.remove("ativo"));
+    pontos[imagemAtual].classList.add("ativo");
+}
 const setaEsquerda = document.querySelector(".seta-esquerda");
 const setaDireita = document.querySelector(".seta-direita");
 console.log(fotoEsfiha);
@@ -1010,6 +1015,7 @@ setaDireita.addEventListener("click", () => {
         imagemAtual = 0;
     }
     fotoEsfiha.src = imagens[imagemAtual];
+    atualizarPontos();
 });
 
 setaEsquerda.addEventListener("click", () => {
@@ -1018,6 +1024,7 @@ setaEsquerda.addEventListener("click", () => {
         imagemAtual = imagens.length - 1;
     }
     fotoEsfiha.src = imagens[imagemAtual];
+    atualizarPontos();
 });
 
 function toggleCategoria(id){
