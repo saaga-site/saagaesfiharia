@@ -1078,36 +1078,6 @@ if ('serviceWorker' in navigator) {
     });
 }
 </script>
-let slideAtual = 0;
-const totalSlides = document.querySelectorAll('.slide').length;
-const pontos = document.querySelectorAll('.ponto');
 
-function mostrarSlide(n) {
-  const slides = document.querySelectorAll('.slide');
-  if (n >= totalSlides) slideAtual = 0;
-  if (n < 0) slideAtual = totalSlides - 1;
-
-  // Troca a imagem
-  slides.forEach(s => s.classList.remove('ativo'));
-  slides[slideAtual].classList.add('ativo');
-
-  // ✅ AQUI: ATUALIZA AS BOLINHAS JUNTO
-  pontos.forEach(p => p.classList.remove('ativo'));
-  pontos[slideAtual].classList.add('ativo');
-}
-
-function proximoSlide() {
-  slideAtual++;
-  mostrarSlide(slideAtual);
-}
-function anteriorSlide() {
-  slideAtual--;
-  mostrarSlide(slideAtual);
-}
-function irParaSlide(n) {
-  slideAtual = n;
-  mostrarSlide(slideAtual);
-}
-</script>
 </body>
 </html>
